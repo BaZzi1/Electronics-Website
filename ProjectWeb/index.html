@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LG Electronics</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="index.css">
+        <link rel="icon" href="./resources/logo/LG-Symbol_white.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./show.js"></script>
+    </head>
+    <body>
+        <header>
+            <img id="logo" src="./resources/logo/LG-Symbol.png" alt=""/>
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li class="dropdown"><a href="">Products</a>
+                        <nav class="dropdown-content">
+                            <ul>
+                              <li><a href="./Categories/CategoryMonitors/MonitorList.html">Monitors</a></li>
+                              <li><a href="./Categories/CategoryPhones/PhoneList.html">Smartphones</a></li>
+                              <li><a href="./Categories/CategoryTV/TvList.html">OLED TVs</a></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li><a href="./contact/contact.html">Contacts</a></li>
+                </ul>
+            </nav>
+            
+        </header>
+        <main>
+            <div><h1>WELCOME TO LG</h1></div>
+          <div>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="./resources/Slides/1.png" style="width:100%">
+                  <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="./Categories/CategoryPhones/slides/1.jpg" style="width:100%">
+                  <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="./Categories/CategoryTV/slides/1.jpg" style="width:100%">
+                  <div class="text"></div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+
+            <script>
+              var slideIndex = 0;
+              showSlides();
+              
+              // Next/previous controls
+              function plusSlides(n) {
+                showSlide(slideIndex += n);
+              }
+      
+              // Thumbnail image controls
+              function currentSlide(n) {
+                showSlide(slideIndex = n);
+              }
+      
+              function showSlide(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+              }
+      
+              function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 5000); // Change image every 2 seconds
+              }
+            </script>
+        </div>
+      </div>
+            <div class="product-section">
+                <img class="product-img" src="./Categories/CategoryMonitors/resources/1.jpg" alt=""/>
+                <div class="product-block-right">
+                    <h2 class="product-heading">PC Monitors</h1>
+                    <p class="product-desc">The pinnacle of gaming monitors. Complete your battle station with LG UltraGear™ Premium Gaming Monitors. Built for gamers, they deliver the latest hardware, specs, ergonomics, sleek design and sensory experience. With gaming-focused features like NVIDIA® G-SYNC® compatibility, 1ms GTG response times, pro-level customization and fast, vivid IPS panels, you're sure to gain an added edge.</p>
+                    <a class="product-ref" href="./Categories/CategoryMonitors/MonitorList.html">LEARN MORE</a>
+                </div>
+            </div>
+
+            <div class="product-section">
+                <img class="product-img" src="./Categories/CategoryPhones/resources/4.jpg" alt=""/>
+                <div class="product-block-left">
+                    <h2 class="product-heading">Smartphones</h1>
+                    <p class="product-desc">Whether you're searching for basic cell phones, state-of-the-art smartphones or something in between, it's all at your fingertips. Smartphones: Featuring ultra-fast processors, the latest apps, high-resolution cameras, HD displays, sophisticated designs and the newest technology, smartphones make it easy to stay organised and entertained on the go. Android: Boasting intuitive Android operating systems, these mobile phones give you lightning-fast connections to the information you want. Plus, with access to thousands of apps, they're perfect for anyone with an on-the-go lifestyle. Touchscreen: Available with a wide range of features, our touchscreen cell phones give you the power to do more with just a tap. QWERTY Keyboard: Along with many of the same great features available on our smartphones, QWERTY devices also feature slide-out keyboards for those who prefer a more tactile experience. Browse our newest mobile phone accessories and upgrade your phone your way.</p>
+                    <a class="product-ref" href="./Categories/CategoryPhones/PhoneList.html">LEARN MORE</a>
+                </div>
+            </div>
+
+            <div class="product-section">
+                <img class="product-img" src="./Categories/CategoryTV/resources/2.jpg" alt=""/>
+                <div class="product-block-right">
+                    <h2 class="product-heading">OLED TVs</h1>
+                    <p class="product-desc">OLED TVs take movies, tv shows and gaming to a different level. Packed with 4K resolution and even deeper shades of black, you'll enjoy every minute of your entertainment. Explore the range of LG OLED TV's below.</p>
+                    <a class="product-ref" href="./Categories/CategoryTV/TvList.html">LEARN MORE</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-notes">*Prices, promotions and availability may vary by store and online. Prices subject to change without notice. Quantities are limited. Check with your local retailers for final price and availability.</div>
+            <div class="footer-notes">LG TV, Computers, Appliances and Mobile Phones. Life's about more than having the latest technology. It’s about the experiences technology creates. From TVs and refrigerators to cell phones and computer monitors, LG Levant delivers home electronics that let you embrace life and prepare you for its greatest moments. LG Electronics UK designs products that are intuitive, responsive and more eco-friendly, so you can spend wisely, be more productive and reduce the impact on the world around you. We’re committed to providing home electronics that work best for the way you live and to keeping you updated with the latest technological advances. After all, life’s better when you’re prepared.</div>
+            <div id="social-media">                
+                <a href=""><img class="media-images" src="./resources/social media icons/facebook.png" alt="facebook"></a>
+                <a href=""><img class="media-images" src="./resources/social media icons/instagram.png" alt="instagram"></a>
+                <a href=""><img class="media-images" src="./resources/social media icons/twitter.png" alt="twitter"></a>
+                <a href=""><img class="media-images" src="./resources/social media icons/youtube.png" alt="youtube"></a>
+                <a href=""><img class="media-images" src="./resources/social media icons/pinterest.png" alt="pinterest"></a>
+				<div class="popup" onmouseover="myFunction()">
+				<a href=""><img class="media-images" src="./resources/social media icons/persone.png" alt="mohamad darsa"></a>
+				<span class="popuptext" id="myPopup">Mohamad Darsa</span>
+				</div>
+            </div>
+        </footer>
+    </body>
+</html>

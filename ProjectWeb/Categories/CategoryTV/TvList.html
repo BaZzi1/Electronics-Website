@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>Products</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="TvList.css">
+		<link rel="icon" href="../../resources/logo/LG-Symbol_white.png">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="../../show.js"></script>
+    </head>
+    <body>
+        <header>
+            <img id="logo" src="../../resources/logo/LG-Symbol.png" alt=""/>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li class="dropdown"><a href="">Products</a>
+                        <nav class="dropdown-content">
+                            <ul>
+                              <li><a href="../CategoryMonitors/MonitorList.html">Monitors</a></li>
+                              <li><a href="../CategoryPhones/PhoneList.html">Smartphones</a></li>
+                              <li><a href="./TvList.html">OLED TVs</a></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li><a href="../../contact/contact.html">Contacts</a></li>
+                </ul>
+            </nav>
+        </header>
+		<main>
+		<div><h1>OLED TVs</h1></div>
+
+		<div>
+			<div class="phone1">
+				<div class="slideshow-container">
+					<div class="mySlides fade">
+					  <div class="numbertext">1 / 3</div>
+					  <img src="./slides/1.jpg" style="width:100%">
+					  <div class="text"></div>
+					</div>
+
+					<div class="mySlides fade">
+					  <div class="numbertext">2 / 3</div>
+					  <img src="./slides/2.jpg" style="width:100%">
+					  <div class="text"></div>
+					</div>
+
+					<div class="mySlides fade">
+					  <div class="numbertext">3 / 3</div>
+					  <img src="./slides/3.jpg" style="width:100%">
+					  <div class="text"></div>
+					</div>
+
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				</div>
+				<div style="text-align:center">
+				  <span class="dot" onclick="currentSlide(1)"></span> 
+				  <span class="dot" onclick="currentSlide(2)"></span> 
+				  <span class="dot" onclick="currentSlide(3)"></span> 
+				</div>
+
+				<script>
+					var slideIndex = 0;
+					showSlides();
+					
+					// Next/previous controls
+					function plusSlides(n) {
+					  showSlide(slideIndex += n);
+					}
+	
+					// Thumbnail image controls
+					function currentSlide(n) {
+					  showSlide(slideIndex = n);
+					}
+	
+					function showSlide(n) {
+					  var i;
+					  var slides = document.getElementsByClassName("mySlides");
+					  var dots = document.getElementsByClassName("dot");
+					  if (n > slides.length) {slideIndex = 1}
+					  if (n < 1) {slideIndex = slides.length}
+					  for (i = 0; i < slides.length; i++) {
+						  slides[i].style.display = "none";
+					  }
+					  for (i = 0; i < dots.length; i++) {
+						  dots[i].className = dots[i].className.replace(" active", "");
+					  }
+					  slides[slideIndex-1].style.display = "block";
+					  dots[slideIndex-1].className += " active";
+					}
+	
+					function showSlides() {
+					  var i;
+					  var slides = document.getElementsByClassName("mySlides");
+					  var dots = document.getElementsByClassName("dot");
+					  for (i = 0; i < slides.length; i++) {
+						slides[i].style.display = "none";  
+					  }
+					  slideIndex++;
+					  if (slideIndex > slides.length) {slideIndex = 1}    
+					  for (i = 0; i < dots.length; i++) {
+						dots[i].className = dots[i].className.replace(" active", "");
+					  }
+					  slides[slideIndex-1].style.display = "block";  
+					  dots[slideIndex-1].className += " active";
+					  setTimeout(showSlides, 5000); // Change image every 2 seconds
+					}
+				</script>
+			</div>
+		</div>
+		<br><br>
+		<div class="mid">
+			<div class="sidenav">
+				<a href="./TvFiles/TV_1.html">LG OLED TV 77 Inch GX Series</a>
+				<a href="./TvFiles/TV_2.html">
+					LG OLED TV 77 Inch CX Series</a>
+				<a href="./TvFiles/TV_3.html">LG OLED TV 65 Inch CX Series</a>
+				<a href="./TvFiles/TV_4.html">LG OLED TV 65 Inch GX Series</a>
+				<a href="./TvFiles/TV_5.html">LG OLED TV 65 inch B9 Series</a>
+				<a href="./TvFiles/TV_6.html">LG OLED TV 77 inch C9 Series</a>
+			</div>
+			<div class="group-phones">
+					<div class="phones"><img src="./resources/1.jpg" alt="Best phone in 2021"><br><b>LG OLED TV 77 Inch GX Series, Gallery Design 4K Cinema HDR WebOS...</b><br>OLED77GXPVA<br><span class="price2">Now:</span><span class="price">$2000</span><br><br><a class="other-ref" href="./TvFiles/TV_1.html">BUY NOW</a></div>
+					<div class="phones"><img src="./resources/2.jpg" alt="Best phone in 2021"><br><b>
+						LG OLED TV 77 Inch CX Series, Cinema Screen Design 4K Cinema HDR WebOS...</b><br>OLED77CXPVA<br><span class="price2">Now:</span><span class="price">$2000</span><br><br><a class="other-ref" href="./TvFiles/TV_2.html">BUY NOW</a></div>
+					<div class="phones"><img src="./resources/3.jpg" alt="Best phone in 2021"><br><b>LG OLED TV 65 Inch CX Series, Cinema Screen Design 4K Cinema HDR WebOS...</b><br>OLED65CXPVA<br><span class="price2">Now:</span><span class="price">$2000</span><br><BR><a class="other-ref" href="./TvFiles/TV_3.html">BUY NOW</a></div>
+					<div class="phones"><img src="./resources/4.jpg" alt="Best phone in 2021"><br><b>LG OLED TV 65 Inch GX Series, Gallery Design 4K Cinema HDR WebOS...</b><br>OLED65GXPVA<br><span class="price2">Now:</span><span class="price">$2000</span><br><br><a class="other-ref" href="./TvFiles/TV_4.html">BUY NOW</a></div>
+					<div class="phones"><img src="./resources/5.jpg" alt="Best phone in 2021"><br><b>LG OLED TV 65 inch B9 Series Perfect Cinema Screen Design 4K HDR...</b><br>OLED65B9PVA<br><span class="price2">Now:</span><span class="price">$2000</span><br><br><a class="other-ref" href="./TvFiles/TV_5.html">BUY NOW</a></div>
+					<div class="phones"><img src="./resources/6.jpg" alt="Best phone in 2021"><br><b>LG OLED TV 77 inch C9 Series Perfect Cinema Screen Design 4K HDR...</b><br>OLED77C9PVA<br><span class="price2">Now:</span><span class="price">$2000</span><br><BR><a class="other-ref" href="./TvFiles/TV_6.html">BUY NOW</a></div>
+			</div>
+		</div>
+		</main>
+		 <footer>
+            <div class="footer-notes">*Prices, promotions and availability may vary by store and online. Prices subject to change without notice. Quantities are limited. Check with your local retailers for final price and availability.</div>
+            <div class="footer-notes">LG TV, Computers, Appliances and Mobile Phones. Life's about more than having the latest technology. It’s about the experiences technology creates. From TVs and refrigerators to cell phones and computer monitors, LG Levant delivers home electronics that let you embrace life and prepare you for its greatest moments. LG Electronics UK designs products that are intuitive, responsive and more eco-friendly, so you can spend wisely, be more productive and reduce the impact on the world around you. We’re committed to providing home electronics that work best for the way you live and to keeping you updated with the latest technological advances. After all, life’s better when you’re prepared.</div>
+            <div id="social-media">                
+                <a href=""><img class="media-images" src="../../resources/social media icons/facebook.png" alt="facebook"></a>
+                <a href=""><img class="media-images" src="../../resources/social media icons/instagram.png" alt="instagram"></a>
+                <a href=""><img class="media-images" src="../../resources/social media icons/twitter.png" alt="twitter"></a>
+                <a href=""><img class="media-images" src="../../resources/social media icons/youtube.png" alt="youtube"></a>
+                <a href=""><img class="media-images" src="../../resources/social media icons/pinterest.png" alt="pinterest"></a>
+				<div class="popup" onmouseover="myFunction()">
+				<a href=""><img class="media-images" src="../../resources/social media icons/persone.png" alt="ALI YOUSSEF"></a>
+				<span class="popuptext" id="myPopup">ALI YOUSSEF</span>
+				</div>
+            </div>
+        </footer>
+		
+	</body>
+</html>
