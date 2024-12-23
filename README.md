@@ -1,7 +1,3 @@
-Here’s a professional rewrite for your repository description:  
-
----
-
 ### **My First Website: Electronics Store**  
 
 This project marks my first step into web development, where I built a basic electronics store website. It served as a practical introduction to the fundamentals of **HTML** and **CSS**, helping me understand the building blocks of web design and development.  
